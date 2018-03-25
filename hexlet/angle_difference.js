@@ -7,4 +7,8 @@
 //diff(0, 190) === 170;       // не 190, а 170, потому что 170 меньше
 //diff(120, 280) === 160;
 
-function diff(a, b) { return Math.abs(a-b)}
+function diff(a,b) {
+    let d1 = Math.abs(a-b);
+    let d2 = 360-d1;
+    return (d1<d2) ? d1 : d2;   
+}
