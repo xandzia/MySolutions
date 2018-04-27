@@ -1,0 +1,131 @@
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+table,
+div {
+    margin: 0 auto;
+}
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+table,
+td, th {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+div {
+    width: 200px;
+    margin-top: 20px;
+}
+
+form {
+    display: inline-grid;
+    width: 100%;
+    position: relative;
+}
+
+input:invalid + button {
+    display: none;
+}
+
+.submit {
+    margin-top: 15px;
+    width: 210px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="tel"] {
+    padding: 5px;
+    width: 200px;
+}
+
+.send {
+    position: relative;
+    width: 214px;
+}
+
+input:invalid + span:after {
+    position: absolute;
+    content: '';
+    padding-left: 45px;
+    color: #009000;
+    /*  display: none;*/
+}
+
+input:valid + span:after {
+    position: absolute;
+    content: 'Надіслати дані на телефон';
+    color: #009000;
+    bottom: 0;
+    left: 36%;
+    padding: 5px 15px;
+    border: 1px solid #009000;
+    left: 0;
+}
+
+#workDay:checked ~ table > tbody > .restDay,
+#restDay:checked ~ table > tbody > .workDay {
+    display: none;
+}
+#second:checked ~ table > tbody > .first,
+#first:checked ~ table > tbody > .second {
+    display: none;
+}
+#terapevt:checked ~ table > tbody > .hirurg,
+#terapevt:checked ~ table > tbody > .ortoped,
+#hirurg:checked ~ table > tbody > .terapevt,
+#hirurg:checked ~ table > tbody > .ortoped,
+#ortoped:checked ~ table > tbody > .hirurg,
+#ortoped:checked ~ table > tbody > .terapevt {
+    display: none;
+}
+
+table {
+  overflow: hidden;
+}
+
+td, th {
+  padding: 10px;
+  position: relative;
+  outline: 0;
+}
+
+body:not(.nohover) tbody tr:hover {
+  background-color: #ffa;
+}
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after { 
+  content: '';  
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td:hover::after,
+th:hover::after {
+  background-color: #ffa;
+}

@@ -1,0 +1,41 @@
+input[type="checkbox"] {
+    display:none;            
+}
+#red:checked + label,
+#green:checked + label,
+#blue:checked + label {
+    opacity: 0.5;
+}
+label {
+    margin-right: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#red:checked ~ .red,
+#green:checked ~ .green,
+#blue:checked ~ .blue {
+    display: none;
+}
+#red+label {
+    color: red;
+}
+#green+label {
+    color: green;
+}
+#blue+label {
+    color: blue;
+}
+span {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.green {
+    background: green;
+}
+.blue {
+    background: blue;
+}
+.red {
+    background: red;
+}

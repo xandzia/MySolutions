@@ -1,0 +1,16 @@
+* {
+    font-size: 1.2em;
+}
+A[href^="/"] {
+    color: blue;
+}
+A[href$=".ru"] {
+    color: #f70;
+}
+A[href$="google.com"] {
+    color: #666;
+}
+span {
+    display: inline-block;
+    transform: rotate(90deg);
+}

@@ -1,0 +1,48 @@
+body {
+  width: 600px;  
+}
+h1 {
+    text-align: right;
+}
+h1,
+h2 {
+    color: orange;    
+}
+.students-table tbody tr td:first-child {
+    color: orange;
+    text-align: left;
+}
+p:first-letter {
+    color: red;
+    font-size: 2em;
+}
+em,
+.students-table tbody td ~ td{
+    color: white;
+    background-color: green;
+}
+.students-table {
+    text-align: center;    
+}
+#warehouse h2 {
+    color: blue;
+}
+ul li {
+    font-weight: bold;
+}
+.fruits-list {
+    color: grey;
+}
+.vegetables-list {
+    color: red;
+}
+#warehouse .fruits-list {
+    color: green;
+}
+thead {
+    font-weight: bold;
+}
+.fruits-list li,
+.vegetables-list li {
+    font-weight: normal;
+}

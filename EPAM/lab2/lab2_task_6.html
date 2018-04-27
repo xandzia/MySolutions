@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="task6.css">
+</head>
+
+<body>
+    <span>Лікарі, що працюють у</span><br>
+    <input type="checkbox" id="workDay">
+    <label for="workDay">будні</label><br>
+    <input type="checkbox" id="restDay">
+    <label for="restDay">вихідні</label><br>
+    <span>Лікарі категорії</span><br>
+    <input type="checkbox" id="first">
+    <label for="first">першої</label><br>
+    <input type="checkbox" id="second">
+    <label for="second">другої</label><br>
+    <span>Спеціальність</span><br>
+    <input type="checkbox" id="hirurg">
+    <label for="hirurg">хірург</label><br>
+    <input type="checkbox" id="ortoped">
+    <label for="ortoped">ортопед</label><br>
+    <input type="checkbox" id="terapevt">
+    <label for="terapevt">терапевт</label><br><br>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Пошук за прізвищем..">
+    <table id="myTable">
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Спеціальність</th>
+                <th>ПІБ</th>
+                <th>категорія</th>
+                <th>Номер кабінету</th>
+                <th>Години прийому</th>
+            </tr>
+            <tr class="first restDay hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-12:00</td>
+            </tr>
+            <tr class="workDay second hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-17:00</td>
+            </tr>
+            <tr class="restDay first ortoped">
+                <td>ортопед</td>
+                <td>Ортопедов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-10:00</td>
+            </tr>
+            <tr class="workDay first ortoped">
+                <td>ортопед</td>
+                <td>Ортопедов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-11:00</td>
+            </tr>
+            <tr class="workDay second hirurg">
+                <td>хірург</td>
+                <td>Ортопедов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>14:00-15:00</td>
+            </tr>
+            <tr class="restDay second terapevt">
+                <td>терапевт</td>
+                <td>Терапевтов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="restDay second terapevt">
+                <td>терапевт</td>
+                <td>Терапевтов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="workDay second terapevt">
+                <td>терапевт</td>
+                <td>Терапевтов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="restDay first hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-13:00</td>
+            </tr>
+            <tr class="workDay first hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-13:00</td>
+            </tr>
+            <tr class="restDay second hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="workDay first hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-13:00</td>
+            </tr>
+            <tr class="workDay second hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="restDay second hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>друга</td>
+                <td>333</td>
+                <td>15:00-16:00</td>
+            </tr>
+            <tr class="workDay first hirurg">
+                <td>хірург</td>
+                <td>Хірургов А. С.</td>
+                <td>перша</td>
+                <td>333</td>
+                <td>5:00-13:00</td>
+            </tr>
+        </tbody>
+    </table>
+    <form>
+        <div class="send">
+            <label>Phone number:</label>
+            <input type="tel" required>
+            <label>Email:</label>
+            <input type="email" required>
+            <span class="validity"></span>
+            <button class="submit" type="submit"></button>
+        </div>
+    </form>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

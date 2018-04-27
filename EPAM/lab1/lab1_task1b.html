@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            height: 400px;
+        }
+
+        td {
+            border: 5px solid #000;
+        }
+        .border-top {
+            border-top: none;
+        }
+        .border-left {
+            border-left: none;
+        }
+        .border-bottom {
+            border-bottom: none;
+        }
+        .border-right {
+            border-right: none;
+        }
+        .yellow {
+            background: #fffa69;
+        }
+        .white {
+            background: #fff;
+        }
+        .blue {
+            background: #074481;
+        }
+        .black {
+            background: #000000;
+        }
+        .red {
+            background: #ff5b2d;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody class="white">
+            <tr height="30px">
+                <td class="border-top border-left" width="85px" colspan="2"></td>
+                <td class="border-top" width="155px" colspan="2"></td>
+                <td class="border-top border-right yellow" width="155px" colspan="2" background="#fffa69"></td>
+            </tr>
+            <tr height="100px">
+                <td class="border-left" width="30px"></td>
+                <td class="red" colspan="3" rowspan="2"></td>
+                <td class="border-right yellow" colspan="2" rowspan=""></td>
+            </tr>
+            <tr height="100px">
+                <td class="border-left" rowspan="2"></td>
+                <td></td>
+                <td class="border-right"></td>
+            </tr>
+            <tr>
+                <td class="black" width="50px"></td>
+                <td class="black" width="50px"></td>
+                <td width="100px"></td>
+                <td class="border-right" colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="border-left border-bottom yellow" rowspan="3"></td>
+                <td class="black"></td>
+                <td class="black"></td>
+                <td></td>
+                <td class="border-right blue" colspan="2" rowspan="2"></td>
+            </tr>
+            <tr height="23px">
+                <td class="border-bottom" colspan="2" rowspan="2"></td>
+                <td class="black"></td>
+            </tr>
+            <tr height="30px">
+                <td class="border-bottom border-right" colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

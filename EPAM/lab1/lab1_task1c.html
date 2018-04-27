@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            margin-top: 20px;
+        }
+        section:last-of-type {
+            margin-bottom: 20px;            
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your Name"><br>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Your email">
+        </fieldset>
+        <fieldset>
+            <span>Sex</span><br>
+            <label for="male">Male</label>
+            <input id="male" type="radio" checked>
+            <label for="female">Female</label>
+            <input id="female" type="radio">
+        </fieldset>
+        <fieldset>
+            <span>Current status</span><br>
+            <label for="st">Student</label>
+            <input id="st" type="checkbox">
+            <label for="em">Employed</label>
+            <input id="em" type="checkbox">
+            <label for="un">Unemployed</label>
+            <input id="un" type="checkbox">
+        </fieldset>
+        <section>
+            <span>Birthday</span><br>
+            <input type="date" placeholder="дд.мм.ррр">
+        </section>
+        <section>
+            <span>Skills and Technologies</span><br>
+            <select>
+              <optgroup label="Tech skills">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>ASP.NET</option>
+                <option>PHP</option>
+              </optgroup> 
+              <optgroup label="Soft skills">
+                <option>Time management</option>
+                <option>Proactivity</option>
+                <option>Teamwork</option>
+                <option>Leadership</option>
+              </optgroup>
+            </select>
+        </section>
+        <section>
+            <span>Photo</span><br>
+            <input type="file">
+        </section>
+        <section>
+            <span>Comments</span><br>
+            <textarea type="textarea" rows="10" cols="30" maxlength="400"></textarea>
+        </section>
+        <input type="submit" value="save">
+    </form>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3b3b39;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.view {
+    position: absolute;
+    top: 0;
+    color: white;
+    background: #549441;
+    padding: 5px 10px;
+    border-radius: 5px;
+    left: 10px;
+}
+
+a:hover {
+    color: red;
+}
+
+figure > div:hover {
+    transform: scale(1.1);
+}
+
+figure > div {
+    transition: transform 0.5s
+}
+
+.view:hover,
+main > input[type="checkbox"]:checked:hover ~ label {
+    background: #513727;
+}
+
+figure {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid transparent;
+}
+
+figure:hover {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+figcaption {
+    position: relative;
+}
+
+figcaption a {
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+img {
+    width: 100%
+}
+
+header {
+    text-align: center;
+}
+
+span {
+    display: block;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 18%
+}
+
+.description {
+    margin-top: 10px;
+    color: grey;
+    font-size: 14px
+}
+
+.star {
+    position: absolute;
+    top: 58px;
+    left: -7px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    color: gray;
+}
+
+.star > label {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.star > input[type=radio]:checked ~ label {
+    color: gold;
+    font-weight: bolder;
+}
+
+.star:hover > input[type=radio] + label:hover,
+.star:hover > input[type=radio] + label:hover ~ label {
+    color: gold;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 14px
+}
+
+main > input[type="checkbox"]:checked ~ label {
+    background: red;
+}
+
+main > input[type="checkbox"]:checked ~ figure {
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+main > input[type="checkbox"]:checked ~ figure > div {
+    width: 25%;
+    display: inline-block
+}
+
+main > input[type="checkbox"]:checked ~ figure > figcaption {
+    width: 25%;
+    display: inline-block;
+    margin: 0 3%
+}
+
+main > input[type="checkbox"]:checked ~ figure p {
+    width: 40%;
+    display: inline-block
+}
+
+main > input[type="checkbox"]:checked ~ figure .star {
+    top: 50px
+}
