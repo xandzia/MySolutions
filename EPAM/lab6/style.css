@@ -1,0 +1,211 @@
+body {
+    background: #224666;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header {
+    flex: 0 0 auto;
+}
+header h1,
+h3 {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 10px
+}
+
+.container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container input {
+    display: none;
+}
+
+.column1 {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.column3 {
+    flex: 1.5;
+    margin: 0;
+    height: 830px;
+    padding: 0 20px;
+    background: #183147;
+}
+
+.column3 input {
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+
+}
+
+
+.column1 label:hover {
+    background: #183147;
+}
+
+.column1 label {
+    text-align: center;
+    display: block;
+    width: 100%;
+    line-height: 2.5em;
+    color: white;
+    background: #326695;
+    border: 0;
+    cursor: pointer;
+}
+
+.column3 label {
+    margin-left: 100px;
+}
+
+input {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+aside ul {
+    margin-top: 20px;
+    position: relative;
+}
+
+aside ul li {
+    margin-top: 10px
+}
+
+aside ul li:after {
+    content: "progress";
+    background: linear-gradient(to right, #92d04f, white);
+    font-size: 13px;
+    color: transparent;
+    width: 100%;
+    margin-top: 5px;
+    display: block;
+}
+
+aside ul li:nth-child(2):after {
+    background: linear-gradient(to right, #f6c103, white);
+    width: 80%;
+}
+
+aside ul li:nth-child(3):after {
+    background: linear-gradient(to right, #c00000, white);
+    width: 50%;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.small {
+    width: auto;
+    height: 100%;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 50px;
+    text-align: center;
+}
+
+/******************** CHECKED **********************/
+
+#xs:checked ~ .column2 > .grid > .xs,
+#s:checked ~ .column2 > .grid > .s,
+#m:checked ~ .column2 > .grid > .m,
+#xl:checked ~ .column2 > .grid > .xl,
+#xxl:checked ~ .column2 > .grid > .xxl {
+    opacity: 0.8;
+    filter: gray;
+    -webkit-filter: grayscale(1)
+}
+
+/******************** GRID **********************/
+
+.column2 {
+    flex: 5;
+    margin: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+        'item1 item2 item2' 
+        'item3 item4 item5' 
+        'item6 item6 item7' 
+        'item8 item8 item8';
+    grid-gap: 10px;
+    padding: 0 10px;
+}
+
+.grid > div {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.grid > div:hover > span {
+    z-index: 2;    
+}
+.grid > div > span {
+    position: absolute;
+    padding: 10px;
+    background: #183147;
+}
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+.item8 {
+    grid-area: item8;
+}
