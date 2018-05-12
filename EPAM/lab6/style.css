@@ -46,7 +46,37 @@ h3 {
 .column3 input {
     display: inline-block;
 }
-
+.column3 ul {
+    display: flex;
+    flex-direction: column;
+}
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+.order-3 {
+    order: 3;
+}
+.order-4 {
+    order: 4;
+}
+.order-5 {
+    order: 5;
+}
+#check:checked ~ #ordered>.order-4 {
+    order: 2;
+}
+#check:checked ~ #ordered>.order-5 {
+    order: 3;
+}
+#check:checked ~ #ordered>.order-3 {
+    order: 5;
+}
+#check:checked ~ #ordered>.order-2 {
+    order: 4;
+}
 ul {
     margin: 0;
     padding: 0;

@@ -1,0 +1,455 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-ExtraBold.eot');
+    src: local('☺'), url('fonts/Circe-ExtraBold.woff') format('woff'), url('fonts/Circe-ExtraBold.ttf') format('truetype'), url('fonts/Circe-ExtraBold.svg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('fonts/Circe-Bold.eot');
+    src: local('☺'), url('fonts/Circe-Bold.woff') format('woff'), url('fonts/Circe-Bold.ttf') format('truetype'), url('fonts/Circe-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('fonts/Circe.eot');
+    src: local('☺'), url('fonts/Circe.woff') format('woff'), url('fonts/Circe.ttf') format('truetype'), url('fonts/Circe.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('fonts/Circe-Light.eot');
+    src: local('☺'), url('fonts/Circe-Light.woff') format('woff'), url('fonts/Circe-Light.ttf') format('truetype'), url('fonts/Circe-Light.svg') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('fonts/Circe-ExtraLight.eot');
+    src: local('☺'), url('fonts/Circe-ExtraLight.woff') format('woff'), url('fonts/Circe-ExtraLight.ttf') format('truetype'), url('fonts/Circe-ExtraLight.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Circe', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    background: url(img/bg1.png) no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    position: relative;
+}
+
+.header_div-top {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header picture img {
+    width: 100%;
+}
+
+.calc {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 100px;
+}
+
+.calc p:nth-child(2) {
+    padding: 0 20px 0 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header_span-circle {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: red;
+    background: white;
+}
+
+nav {
+    display: flex;
+    height: 50px;
+    margin-top: 25px;
+    transition: opacity 0.5s;
+}
+
+nav button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    width: 90px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+nav button:hover {
+    border-color: white;
+}
+
+.header_article-center {
+    margin: 12% auto;
+    width: 50%;
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    text-align: center
+}
+
+.header_article-center h1 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.first > .last-btn,
+.header_article-center button {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    width: 20em;
+    border: 2px solid transparent;
+    background: #a3cd8c;
+    color: white;
+    padding: 20px 20px;
+    cursor: pointer;
+    margin-top: 20px
+}
+
+.first > .last-btn:hover,
+.header_article-center button:hover {
+    background: white;
+    color: #a3cd8c;
+
+}
+
+.center {
+    background: linear-gradient(#394560, #49617c, #434e6d, #3b435a);
+}
+
+.border {
+    height: 10px;
+    background: linear-gradient(to right, #a0ca90, #7da3d6);
+}
+
+.first {
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+    border-bottom: 2px solid #98999c26;
+}
+
+.first article {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first article p {
+    width: 100%;
+}
+
+.first picture {
+    flex-basis: 50%;
+    margin: 0 auto;
+}
+
+.first picture img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.first button {
+    padding: 10px 15px;
+    margin: 10px 0 0 0;
+    width: 200px;
+    line-height: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid #a3cd8c;
+    color: #a3cd8c;
+}
+
+.first button:hover {
+    border: 2px solid white;
+    color: white;
+}
+
+h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.first figure {
+    padding: 0 1%;
+    text-align: center;
+}
+
+.first .long {
+    width: 250px;
+    padding: 7px 15px;
+}
+
+.first .long span {
+    margin-left: 6px;
+    font-weight: bolder;
+    font-size: 1.3em
+}
+
+table td {
+    padding: 15px;
+    width: 200px;
+    font-weight: bold;
+    display: block;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+table {
+    border: 1px solid #98999c26;
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+    margin-right: 30px
+}
+
+tr td:nth-child(3) {
+    width: 120px;
+    color: #61ba86;
+}
+
+tr td:nth-child(2) {
+    width: 150px;
+    color: #7d8190;
+}
+
+tr td:first-child {
+    color: #7da3cb;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news p:nth-child(odd) {
+    color: #7d8190;
+    margin-top: 0;
+}
+
+.prelast {
+    background: url(img/bg2.png) no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 10em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.prelast form {
+    margin: 0 auto;
+    margin-bottom: -10%;
+    background: white;
+    width: 400px;
+    padding: 0 4% 2% 4%;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 10px 0px 0px 0px;
+    -moz-border-image: url(img/ribbon.png) 10 0 repeat;
+    -webkit-border-image: url(img/ribbon.png) 10 0 repeat;
+    -o-border-image: url(img/ribbon.png) 10 0 repeat;
+    border-image: url(img/ribbon.png) 10 0 fill repeat;
+}
+
+.prelast h3 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-top: 1.4em;
+}
+
+.prelast form input,
+.prelast .textarea {
+    background: #f4f7fb;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+::placeholder {
+    color: #b8bcc9;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.first .submit {
+    width: 100%;
+    border-radius: 4px;
+    background: #7da3d7;
+    border: 2px solid #7da3d7;
+    color: white;
+    cursor: pointer;
+
+}
+
+.text {
+    height: 24%;
+}
+
+footer {
+    background: #3a4258;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-transform: uppercase;
+}
+
+.left > a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.left > a:hover {
+    text-decoration: underline;
+}
+
+.last {
+    text-align: center;
+    display: block;
+    background: #3a4258;
+}
+
+.footer {
+    padding: 20px 5%
+}
+
+/*************** NAVBAR ***************/
+
+.nav-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-btn > label > span {
+    transition: transform 0.2s;
+}
+
+label {
+    cursor: pointer;
+}
+
+#nav-check {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    nav {
+        flex-direction: column;
+        position: relative;
+        right: -25px;
+        top: 25px
+    }
+    nav button {
+        margin-bottom: 20px;
+        padding: 20px 0 20px 0;
+        line-height: 0;
+    }
+    .first {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    article,
+    .first div {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .first button {
+        margin: 0 auto;
+    }
+    table {
+        margin-right: 0;
+        margin: 0 auto;
+        width: inherit;
+    }
+    #bottom {
+        margin-bottom: 0;
+    }
+    /*************** NAVBAR ***************/
+    .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .nav-btn > label {
+        display: inline-block;
+    }
+    .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    #nav-check:not(:checked) + nav {
+        opacity: 0;
+    }
+    #nav-check:checked + nav {
+        opacity: 1;
+    }
+    #nav-check:checked ~ .nav-btn > label > span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 12px;
+        right: 7px
+    }
+    #nav-check:checked ~ .nav-btn span:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+    #nav-check:checked ~ .nav-btn span:nth-child(3) {
+        display: none;
+    }
+
+}
