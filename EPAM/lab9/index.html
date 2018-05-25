@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="640" height="480">
+     <g>
+      <title>Layer 1</title>
+      <path id="svg_5" d="m209,149l171,-1l82,104l-328,0l75,-103z" fill-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+     </g>
+    </svg>
+    
+    <svg width="640" height="480">
+      <g>
+      <title>Layer 2</title>
+      <rect transform="rotate(45 222.00000000000009,206.99999999999997) " stroke-opacity="0" id="svg_2" height="180" width="180" y="117" x="132" stroke-width="5" stroke="#000000" fill="#FF0000"/>
+     </g>
+    </svg>
+        
+    <svg width="640" height="480">
+      <g>
+      <title>Layer 3</title>
+      <path id="svg_3" d="m134,87l304,-6l-300,50l296,-6l-298,42l294,-2l-295,37l294,0l-295,35l289,2" stroke-width="5" stroke="#000000" fill="none"/>
+     </g>
+    </svg>
+    
+    <svg width="640" height="480">
+     <g>
+      <title>Layer 4</title>
+      <polygon stroke-opacity="0" stroke-width="5" stroke="#000000" points="293,20.25102996826172 320.0388641357422,155.7829475402832 421.5774230957031,62.02836608886719 363.7886657714844,187.56903076171875 501.0426330566406,171.40285110473633 380.49957275390625,239 501.0426330566406,306.59715270996094 363.7886657714844,290.43096923828125 421.5774230957031,415.97161865234375 320.0388641357422,322.21705627441406 293,457.74896240234375 265.9611358642578,322.21705627441406 164.42258071899414,415.97161865234375 222.2113494873047,290.43096923828125 84.95736885070801,306.59715270996094 205.5004119873047,239 84.95736885070801,171.40285110473633 222.2113494873047,187.56903076171875 164.42258071899414,62.02836608886719 265.9611358642578,155.7829475402832 293,20.25102996826172 320.0388641357422,155.7829475402832 " strokeWidth="5" strokecolor="#000000" fill="#ff7f00" orient="point" r2="87.49959" r="218.74897" point="10" shape="star" id="svg_2" cy="126" cx="186"/>
+     </g>
+    </svg>
+    
+    <canvas id="c" width="300" height="300"></canvas>
+    
+    <script>
+        var c = document.getElementById('c');
+        var context = c.getContext("2d");
+        var centerx = context.canvas.width / 2;
+        var centery = context.canvas.height / 2;
+
+        a = 1;
+        b = 1;
+
+        context.clearRect(0, 0, 300, 300);
+
+        context.moveTo(centerx, centery);
+        context.beginPath();
+        for (i = 0; i < 720; i++) {
+            angle = 0.1 * i;
+            x = centerx + (a + b * angle) * Math.cos(angle);
+            y = centery + (a + b * angle) * Math.sin(angle);
+
+            context.lineTo(x, y);
+        }
+        context.strokeStyle = "#000";
+        context.stroke();
+    </script>
+</body>
+
+</html>
