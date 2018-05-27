@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 25px;
+        }
+
+        td {
+            border: 1px solid purple;
+            padding: 10px;
+        }
+
+        .pink {
+            color: purple;
+        }
+        div {
+            margin: 25px;
+        }
+    </style>
 </head>
+
 <body>
+    <div>
+      <h3>одновимірний масив</h3>
+       <p>введіть к-ть стовбців</p>
+        <input type="number" id="number">
+        <button id="createOneRow">create</button>
+    </div>
+    <div>
+      <h3>двовимірний масив</h3>
+       <p>введіть к-ть стовбців</p>
+        <input type="number" id="row">
+       <p>введіть к-ть рядків</p>
+        <input type="number" id="column">
+        <button id="createDoubleArray">create double</button>
+    </div>
+    <div>
+        <button id="random">create random</button>        
+    </div>
+    <table id="table"></table>
+    
     <script src="script.js"></script>
     <script src="lab6.js"></script>
+    <script src="lab8.js"></script>
 </body>
 </html>

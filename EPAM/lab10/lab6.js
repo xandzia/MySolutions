@@ -64,7 +64,7 @@ function cardSum(num) {
         return false
     }
 }
-
+console.log("%o","Завдання 6")
 console.log(creditCard(378282246310005))
 console.log(creditCard(371449635398431))
 console.log(creditCard(5555555555554444))
