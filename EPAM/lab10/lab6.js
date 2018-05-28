@@ -1,6 +1,16 @@
 // 6
 function creditCard(num) {
     let length = Math.log(num) * Math.LOG10E + 1 | 0;
+// довжина числа
+//    function numberLength(num) {
+//        let length = 0, i
+//        num = parseInt(num);
+//        for(i = num; i >= 1; i) {
+//            ++length;
+//            i = Math.floor(i/10);
+//        }
+//        return length;
+//    }
     let output;
     if (length === 15) {
         let firstNums = Math.floor(Number(num / 10000000000000))
@@ -19,7 +29,6 @@ function creditCard(num) {
         }
     } else if (length === 13) {
         let firstNums = Math.floor(Number(num / 1000000000000))
-        console.log(firstNums)
         if (firstNums === 4) {
             output = (cardSum(num)) ? 'VISA' : 'INVALID'
         }
