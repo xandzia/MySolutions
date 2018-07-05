@@ -5,3 +5,6 @@
           arr.splice(arr.indexOf(obj), 1);
         }
       }
+
+const filterValue = (obj, key, value)=> obj.filter(v => v[key] === value);
+
