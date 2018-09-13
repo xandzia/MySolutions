@@ -30,3 +30,12 @@ const filterValue = (obj, key, value)=> obj.filter(v => v[key] === value);
             }
           }
         }
+
+//if array hasn't item
+let arr = ['a','b','c'];
+if (arr.indexOf('f') === -1) { //true
+//todo
+}
+if (arr.indexOf('a') === -1) { //false
+//todo
+}
