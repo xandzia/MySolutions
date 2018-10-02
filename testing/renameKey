@@ -1,0 +1,9 @@
+      renameKeys(arr, oldKey, newKey){
+        arr.forEach(item=>{
+          if (oldKey !== newKey) {
+            Object.defineProperty(item, newKey,
+              Object.getOwnPropertyDescriptor(item, oldKey));
+            delete item[oldKey];
+          }
+        })
+      },
